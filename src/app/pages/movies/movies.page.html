@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list class="ion-activatable ripple-parent">
     <ion-item button *ngFor="let item of movies" [routerLink]="[item.id]">
       <ion-avatar slot="start">
         <!-- <img [src]="imageBaseUrl + item.poster_path"> -->
@@ -15,6 +15,7 @@
       <ion-label>
         {{ item.title }}
         <p>{{ item.release_date | date:'y' }}</p>
+        <!-- <ion-ripple-effect></ion-ripple-effect> -->
       </ion-label>
 
       <ion-badge slot="end">{{ item.vote_average }}</ion-badge>

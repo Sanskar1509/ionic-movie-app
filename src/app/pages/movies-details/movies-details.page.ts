@@ -12,6 +12,7 @@ export class MoviesDetailsPage implements OnInit {
   movie  = <any>null;
   production_company  = <any>null;
   imageBaseUrl=environment.image;
+  production_country = <any>null;
  companyName = <any>null;
   constructor(private route:ActivatedRoute,private movieService: MovieService) { }
 
@@ -21,6 +22,7 @@ export class MoviesDetailsPage implements OnInit {
 
       const name = 'production_companies'
       this.production_company = Object.values(res)[13][0];
+      this.production_country = Object.values(res)[14][0];
       console.log(res)
       this.movie=res;
       // this.companyName=res;
